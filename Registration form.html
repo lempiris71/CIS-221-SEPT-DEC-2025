@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form action="/submit" method="post">
+
+    <fieldset>
+      <legend>Personal Information</legend>
+      Full Name: <input type="text" name="fullname" required><br><br>
+      Password: <input type="password" name="password" required><br><br>
+      Email: <input type="email" name="email"><br><br>
+      Phone: <input type="tel" name="phone"><br><br>
+      Date of Birth: <input type="date" name="dob"><br><br>
+      Gender: 
+      <input type="radio" name="gender" value="male"> Male
+      <input type="radio" name="gender" value="female"> Female
+      <input type="radio" name="gender" value="other"> Other<br><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferences</legend>
+      Select Course:
+      <select name="course">
+        <option value="cs">Computer Science</option>
+        <option value="it">Information Technology</option>
+        <option value="se">Software Engineering</option>
+      </select><br><br>
+
+      Hobbies:
+      <input type="checkbox" name="hobby" value="sports"> Sports
+      <input type="checkbox" name="hobby" value="music"> Music
+      <input type="checkbox" name="hobby" value="reading"> Reading<br><br>
+
+      Choose Favorite Color: <input type="color" name="favcolor"><br><br>
+      Rate Your Skills: <input type="range" name="skills" min="1" max="10"><br><br>
+      Upload Photo: <input type="file" name="photo"><br><br>
+      Website: <input type="url" name="website"><br><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Additional Info</legend>
+      Comments:<br>
+      <textarea name="comments" rows="4" cols="40"></textarea><br><br>
+
+      Search Interests: 
+      <input list="interests" name="interest">
+      <datalist id="interests">
+        <option value="Web Development">
+        <option value="AI & Machine Learning">
+        <option value="Cyber Security">
+        <option value="Networking">
+      </datalist><br><br>
+    </fieldset>
+
+    <br>
+    <input type="submit" value="Register">
+    <input type="reset" value="Clear">
+  </form>
+</body>
+</html>
