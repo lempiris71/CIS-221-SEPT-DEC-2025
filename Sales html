@@ -1,0 +1,67 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fashionstore";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT item_id, item_name, price, stock, sold, (price * sold) AS revenue 
+        FROM inventory";
+$result = $conn->query($sql);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FashionStore Inventory</title>
+  <style>
+    body { font-family: Arial; margin: 0; padding: 0; background: #fafafa; }
+    header { background: #111; color: #fff; padding: 15px; text-align: center; }
+    table { width: 80%; margin: 20px auto; border-collapse: collapse; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+    th { background: #e91e63; color: white; }
+    tr:nth-child(even) { background: #fce4ec; }
+    footer { background: #111; color: #fff; text-align: center; padding: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <header>FashionStore Inventory Management</header>
+  <table>
+    <tr>
+      <th>Item Name</th>
+      <th>Price ($)</th>
+      <th>Sold</th>
+      <th>In Stock</th>
+      <th>Total Revenue ($)</th>
+    </tr>
+    <?php
+    $totalRevenue = 0;
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        echo "<tr>
+                <td>{$row['item_name']}</td>
+                <td>{$row['price']}</td>
+                <td>{$row['sold']}</td>
+                <td>{$row['stock']}</td>
+                <td>{$row['revenue']}</td>
+              </tr>";
+        $totalRevenue += $row['revenue'];
+      }
+    }
+    ?>
+    <tr style="font-weight:bold; background:#f48fb1;">
+      <td colspan="4">Total Store Revenue</td>
+      <td><?php echo $totalRevenue; ?></td>
+    </tr>
+  </table>
+  <footer>&copy; 2025 FashionStore. All rights reserved.</footer>
+</body>
+</html>
+<?php $conn->close(); ?>
