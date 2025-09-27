@@ -1,0 +1,137 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FashionStore - E-Commerce Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .container {
+      width: 90%;
+      margin: auto;
+      padding: 20px;
+    }
+    h2 {
+      color: #e91e63;
+      margin-top: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background: #e91e63;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background: #fce4ec;
+    }
+    .benefits, .fashion-options {
+      margin-top: 25px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      padding: 8px;
+      margin: 5px 0;
+      background: #f8bbd0;
+      border-radius: 6px;
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    FashionStore - Your Style, Our Passion
+  </header>
+
+  <div class="container">
+    <h2>Upcoming Sale Offers</h2>
+    <table>
+      <tr>
+        <th>Sale Event</th>
+        <th>Discount</th>
+        <th>Dates</th>
+      </tr>
+      <tr>
+        <td>New Year Mega Sale</td>
+        <td>Up to 50% Off</td>
+        <td>1st - 7th January</td>
+      </tr>
+      <tr>
+        <td>Valentine’s Special</td>
+        <td>Buy 1 Get 1 Free</td>
+        <td>10th - 14th February</td>
+      </tr>
+      <tr>
+        <td>Summer Fashion Fest</td>
+        <td>Flat 40% Off</td>
+        <td>1st - 15th June</td>
+      </tr>
+      <tr>
+        <td>Black Friday Bonanza</td>
+        <td>Up to 70% Off</td>
+        <td>25th November</td>
+      </tr>
+    </table>
+
+    <div class="benefits">
+      <h2>Why Shop at FashionStore?</h2>
+      <ul>
+        <li>High-quality fashion at affordable prices</li>
+        <li>Free shipping on orders above $50</li>
+        <li>Easy returns & 24/7 customer support</li>
+        <li>Exclusive offers for members</li>
+        <li>Secure online payments</li>
+      </ul>
+    </div>
+
+    <div class="fashion-options">
+      <h2>Fashion Options Available</h2>
+      <ul>
+        <li>Trendy Men’s Wear</li>
+        <li>Elegant Women’s Collections</li>
+        <li>Stylish Footwear</li>
+        <li>Designer Accessories</li>
+        <li>Seasonal Collections & Limited Editions</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 FashionStore. All rights reserved.
+  </footer>
+</body>
+</html>
